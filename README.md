@@ -12,7 +12,7 @@ I'm Nitish — a passionate backend developer focused on building scalable and s
   - API tested with Postman
   - Deployed live using **Vercel**
 
-> 🔗 [View Project Repository](https://github.com/nagarShivani/E-CommerceGroceryBackend)
+> 🔗 [View Project Repository](https://github.com/Nitixh001/Nitixh001/tree/master)
 
 ---
 
