@@ -6,11 +6,11 @@ const {
      singleCustomer}
       = require("../controllers/customerController");
       //[POST]: register customer
-    router.post("/register",customerController.registerCustomer);
+    router.post("/register",registerCustomer);
 
     //GET getall customer
-    router.get("/customer", customerController.allCustomer); 
+    router.get("/customer",allCustomer); 
 
     //GET single customer
-    router.get("/:id", customerController.singleCustomer);
+    router.get("/:id",singleCustomer);
     module.exports = router;
