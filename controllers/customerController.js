@@ -14,7 +14,7 @@ exports.registerCustomer = async(req,res) => {
 
 exports.allCustomer = async(req,res)=>{
     try{
-       const customers = await Customer.find().populate("userId","name email");
+       const customers = await Customer.find().populate("userId","name email")
   .exec();
   const { id } = req.params;
 if (!mongoose.Types.ObjectId.isValid(id.trim())) {
