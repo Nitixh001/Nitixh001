@@ -14,7 +14,7 @@ exports.registerCustomer = async(req,res) => {
 
 exports.allCustomer = async(req,res)=>{
     try{
-        const customers = await Customer.find({}).populate("userId", "name email").exec();
+        const customers = await Customer.find({}).exec();
         res.status(200).json({success: true, data: customers});
     }catch(error){
         console.error("Error fetching customers:", error)
