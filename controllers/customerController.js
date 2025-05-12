@@ -14,8 +14,13 @@ exports.registerCustomer = async(req,res) => {
 
 exports.allCustomer = async(req,res)=>{
     try{
-        const customers = await Customer.find().populate("userId", "name email").exec();
-        res.status(200).json({success: true, data: customers});
+       const customers = await Customer.find().populate("userId","name email");
+  .exec();
+  const { id } = req.params;
+if (!mongoose.Types.ObjectId.isValid(id.trim())) {
+  return res.status(400).json({ success: false, message: 'Invalid ID format' });
+}
+  res.status(200).json({success: true, data: customers});
     }catch(error){
         console.error("Error fetching customers:", error)
         res.status(500).json({success: false, message: error.message});
