@@ -14,6 +14,8 @@ const authRoutes = require("./routes/authRoutes");
 app.use("/api/auth", authRoutes);
 const userRoutes = require("./routes/userRoutes");
 app.use("/api/user",userRoutes);
+const customerRoutes = require("./routes/customerRoutes");
+app.use("/api/customer",customerRoutes);
 //api testing 
 app.get('/',(req,res)=>{
     res.json("API is Running !");
