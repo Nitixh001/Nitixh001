@@ -9,7 +9,7 @@ const {
     router.post("/register",customerController.registerCustomer);
 
     //GET getall customer
-    router.get("/all", customerController.allCustomer); 
+    router.get("/customer", customerController.allCustomer); 
 
     //GET single customer
     router.get("/:id", customerController.singleCustomer);
